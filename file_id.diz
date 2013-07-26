@@ -1,0 +1,19 @@
+SM2ADDON - SearchManager/2 AddOn
+(c) Steffen Siebert - GNU Freeware
+==================================
+
+IBM Search Manager/2 is a very
+powerful tool for easy finding a
+document on your hard-drive without
+knowing its name.
+
+The included replacement DLLs include
+all the original functions, plus:
+
+1. rmail-Support *NEW*
+2. html-Support
+3. gzip-Support
+4. Ignore files
+5. Set file attributes per directory
+
+*NEW* Includes full sourcecode! *NEW*

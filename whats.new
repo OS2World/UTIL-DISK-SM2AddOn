@@ -1,0 +1,32 @@
+06.05.1998:
+
+ * NEW: Files with extension ".shtml" are treated as HTML.
+
+06.04.1998:
+
+ * NEW: Support for RMAIL files (aka Babyl Format) used by GNU Emacs
+   to store mails and news.
+   SM2AddOn treats files with extension .rmail like a directory
+   containing files, where each file correspond to one mail.
+
+ * NEW: Release of the Sourcecode.
+
+ * CHANGED: SM2AddOn uses zlib to uncompress files packed with gzip.
+   The environment variable SM2_GZIP_FILTER is now obsolete.
+   (As a side effect it not longer possible to prevent SM2AddOn from
+   uncompressing gzipped files).
+
+ * FIXED: Several minor bugs (most of them only showed for
+   directorys with a huge amount of files).
+
+30.01.1998:
+
+ * FIXED: The AddOn didn't work properly on systems with partitions
+   unknown to OS/2 (e.g. NTFS)
+
+15.07.1997:
+
+ * FIXED: EHSLSSFS.DLL crashed if a document could not be opened.
+ 
+ * FIXED: GZIP compressed files and/or HTML files could not be processed,
+   if the filename contained some special charakters (e.g., '+')

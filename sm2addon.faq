@@ -1,0 +1,70 @@
+
+                         IBM SearchManager/2 AddOn
+                                      
+                         Frequently asked Questions
+     _________________________________________________________________
+   
+   Q: Where can I find the UNH tool mentioned in readme.txt?
+   
+   A: You should find version 2.12 of UNH on hobbes: [1]unh212.zip
+     _________________________________________________________________
+   
+   Q: I need SM/2 support for files with format xy. Can you include a
+   filter in your AddOn DLL? I'll even pay for it!
+   
+   A: The main problem here is that the documented API for SM/2
+   extensions does not include functions to add new filters to SM/2!
+   
+   Thus the only way to support new file formats is to convert them into
+   another format already known to SM/2. This is the way my DLL
+   implements HTML support, it just converts (via an external program)
+   the HTML file into plain ascii and let SM/2 index that ascii file.
+   
+   If you can provide me a filter program, which quickly(!) converts your
+   favourite file format into ASCII or another format known to SM/2, send
+   me an email and i'll add this feature to my AddOn DLL.
+     _________________________________________________________________
+   
+   Q: I need support for Postscript/Acrobat files. There is a program
+   called pstotext which converts them to ascii. Can you change your
+   AddOn DLL to use it?
+   
+   A: I could, but I will not do this!
+   
+   If you ever used pstotext, you should have noticed that it's working
+   well, but very slow. It can take several minutes to convert a single
+   postscript file. Thus it is not efficient to do this conversion each
+   time SM/2 accesses the contents of the document.
+   
+   But it is already possible to use my AddOn DLL to index these files
+   via SM/2:
+   
+   Just convert each Postscript/Acrobat file to ascii using ps2text and
+   store them into files with the same name but different fileextension
+   (e.g. ".txt"). You can keep them in the same directory as the original
+   files, but don't forget to let SM/2 ignore those by setting
+   SM2_IGNORE_EXT to ".ps;.pdf"!
+   
+   It should be easy to write a script which creates the ascii file for
+   each Postscipt/Acrobat file, if it does not already exist. You should
+   run this script each time you start SM/2 to index new files.
+     _________________________________________________________________
+   
+   Q: Where can I get pstotext?
+   
+   A: Visit the [2]pstotext hompage for more information on this tool,
+   which also provides a link to the sourcecode.
+   
+   An OS/2 port of pstotext is part of the [3]GhostView package.
+     _________________________________________________________________
+   
+   $Author: siebert $
+   $Date: 1998/04/05 23:47:42 $
+   siebert@logware.de
+   
+
+References
+
+   1. http://hobbes.nmsu.edu/pub/os2/apps/internet/www/util/unh212.zip
+   2. http://www.research.digital.com/SRC/virtualpaper/pstotext.html
+   3. http://www.cs.wisc.edu/~ghost/

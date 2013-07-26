@@ -1,0 +1,11 @@
+DONE: Emacs-Backup Files (*~) nicht indizieren
+TODO: (la)tex filter
+DONE: Unter Warp4 wird beim Starten des Index versucht, auf LW a: und b:
+zuzugreifen.
+FIXED: Bei List_Documents ist das Åbergebene Datum das von der letzten
+Indizierung. Bei RMAIL Files kînnen aber neue Mails hinzugekommen sein,
+die aber ein Ñlteres Datum als das der letzten Indizierung haben, und
+die daher nicht mehr indiziert werden.
+FIXED?: xy.rmail ist nach dem indizieren gelockt, bis man mit sm2 stop sm2
+den server stoppt.
+FIXED: Verzeichnisse, die xy.rmail heissen, werden als RMAIL File angesehen.
